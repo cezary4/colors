@@ -5,10 +5,29 @@
 # if the number is divisible by both three and five out put fizzbang (i.e. replace it with fizzbang)
 # else just out put the number
 
-#fizzbang(15)
+# so for example:
+#fizzbang(5)
 
 #1
 #2
 #fizz
 #4
 #bang
+
+def fizzbang(limit)
+	1.upto(limit) do |number|
+		if (number % 3) + (number % 5) == 0
+			puts "fizzbang"
+		elsif number % 3 == 0
+			puts "fizz"
+		elsif number % 5 == 0
+			puts "bang"
+		else
+			puts number		
+		end
+	end
+end
+
+print "What is the limit? "
+limit = gets.to_i
+fizzbang(limit)
